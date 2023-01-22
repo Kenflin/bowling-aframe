@@ -1,25 +1,29 @@
 # bowling-aframe
 Experience URL: https://kenflin.github.io/bowling-aframe/
-Images:
-## Start
+
+## 360 Images
+### Start
 ![Start](./images/bowling-pals-challenge-start.png)
 
-## Gameplay
+### Gameplay
 ![Gameplay](./images/bowling-pals-challenge-game.png)
 
-## End
+### End
 ![End](./images/bowling-pals-challenge-end.png)
 
-Description: Bowling Experiencience WEBXR . When you click on start button , a countdown start.
+### Description
+Bowling Experiencience WEBXR . When you click on start button , a countdown start.
 You have to throw the bowling ball and try to knockdown the pins at the end of the lane.
 
 When time reach 0 , the game will show you your score. You can press reset to refresh the experience.
 
 
-Components:
+### Components
 
 
-Advantages of using XR:
+### Advantages of using XR
 
 
-Compatibility Devices:
+### Compatibility Devices
+
+This VR experience can run in all devices that have controllers like: HTC vive , Oculus GO , Meta Quest/Meta Quest 2.
