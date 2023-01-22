@@ -1,6 +1,10 @@
 # bowling-aframe
 Experience URL: https://kenflin.github.io/bowling-aframe/
 
+## Gameplay Video
+
+![GameplayVideo]()
+
 ## 360 Images
 ### Start
 ![Start](./images/bowling-pals-challenge-start.png)
