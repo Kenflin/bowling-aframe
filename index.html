@@ -44,6 +44,19 @@ AFRAME.registerComponent('foo', {
       }
 
   });
+
+  AFRAME.registerComponent('phase-shift', {
+  init: function () {
+    var el = this.el
+    el.addEventListener('gripdown', function () {
+      el.setAttribute('collision-filter', {collisionForces: true})
+    })
+    el.addEventListener('gripup', function () {
+      el.setAttribute('collision-filter', {collisionForces: false})
+    })
+  }
+});
+
   function clock(){
     var timeLeft = 20;
     var elem = document.querySelector('#timer');
@@ -140,7 +153,7 @@ AFRAME.registerComponent('foo', {
                               colliderEndEvent: collisions;
                               colliderEndEventProperty: clearedEls;"
         ></a-mixin>
-        <a-mixin id="pointer" raycaster="showLine: true; objects: .sphere, .reset , .start" super-hands="colliderEvent: raycaster-intersection;
+        <a-mixin id="pointer" phase-shift raycaster="showLine: true; objects: .sphere, .reset , .start" super-hands="colliderEvent: raycaster-intersection;
                                colliderEventProperty: els;
                                colliderEndEvent:raycaster-intersection-cleared;
                                colliderEndEventProperty: clearedEls;">
