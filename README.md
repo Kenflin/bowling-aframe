@@ -34,12 +34,12 @@ When time reach 0 , the game will show you your score. You can press reset to re
 
 ### Libraries
 
-- Aframe:
-- Aframe Extras:
-- Aframe Physics System:
-- Aframe Physics Extras:
-- Aframe Event Set Component:
-- Superhands:
+- Aframe: Framework for building virtual reality experience. Based on HTML.
+- Aframe Extras: Add-ons and helpers for A-Frame VR.
+- Aframe Physics System: Components for A-Frame physics integration. Supports CANNON.js and Ammo.js
+- Aframe Physics Extras: Add-on components for the aframe-physics-system to add additional collision detection and behavior control options.
+- Aframe Event Set Component: An A-Frame component to register event listeners that set properties. Replacement for old undocumented Declarative Events API.
+- Superhands: Add natural, intuitive interactions with tracked controller, touch, or mouse input in A-Frame.
 
 ### Advantages of using WebXR
 
