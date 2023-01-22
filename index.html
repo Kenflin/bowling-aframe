@@ -167,8 +167,9 @@ AFRAME.registerComponent('foo', {
     
     <!--VRPlayer-->
 <a-entity  id="player" position="0 -2 0.5">
-<!--
+
         <a-camera></a-camera>
+        <!--
         <a-entity id="rhand" mixin="physics-hands"
                   hand-controls="hand: right">
         </a-entity>
@@ -273,7 +274,7 @@ AFRAME.registerComponent('foo', {
 <a-entity id="ui" position="0 0 0">
   <a-entity scorepanel
           id="scorePanel"
-          position="0 1 -2"
+          position="0 0 -2"
           info-panel
           visible="true"
           scale="1 1 0"
