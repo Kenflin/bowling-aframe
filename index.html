@@ -28,21 +28,6 @@
                       })
                   } 
       });
- //* AFRAME.registerComponent('handle-events', {
-      //  init: function () {
-          
-        //  var el = this.el;
-          
-         // el.addEventListener('grab-start', function (ev) {
-         //   console.log("grab-start");
-         //   console.log(ev.detail.target.states);
-        //  })
-       //   el.addEventListener('grab-end', function (ev) {
-        //    console.log("grab-end");
-       //     console.log(ev.detail.target.states);
-      //    })  
-      //  } 
-     // });
     
 AFRAME.registerComponent('foo', {
     init: function() {
@@ -135,7 +120,7 @@ AFRAME.registerComponent('foo', {
 </head>
   
 <body>
-  <a-scene physics="debug: true; friction: 0.01; restitution: 0.1; iterations: 30">
+  <a-scene physics="friction: 0.01; restitution: 0.1; iterations: 30">
     
     <!-- Assets Load-->
   <a-assets>
