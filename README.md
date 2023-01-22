@@ -1,4 +1,5 @@
 # bowling-aframe
+Experience URL: https://kenflin.github.io/bowling-aframe/
 
 Description: Bowling Experiencience WEBXR . When you click on start button , a countdown start.
 You have to throw the bowling ball and try to knockdown the pins at the end of the lane.
