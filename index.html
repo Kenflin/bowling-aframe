@@ -15,7 +15,7 @@
         init: function () { 
           var el = this.el;
           
-          el.addEventListener('onclick',function (ev) {
+          el.addEventListener('grab-start',function (ev) {
               console.log(ev);
               console.log(getIntersection(ev));
                 //startgame();
