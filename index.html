@@ -15,8 +15,9 @@
         init: function () { 
           var el = this.el;
           
-          el.addEventListener('griptouchstart',function (ev) {
-                startgame();
+          el.addEventListener('raycaster-intersection',function (ev) {
+              console.log(getIntersection(ev));
+                //startgame();
                       })
                   } 
       });
