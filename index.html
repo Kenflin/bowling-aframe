@@ -15,7 +15,7 @@
         init: function () { 
           var el = this.el;
           
-          el.addEventListener('click',function (ev) {
+          el.addEventListener('triggertouchstart',function (ev) {
                 startgame();
                       })
                   } 
@@ -156,9 +156,9 @@ AFRAME.registerComponent('foo', {
                                colliderEndEvent:raycaster-intersection-cleared;
                                colliderEndEventProperty: clearedEls;">
         </a-mixin>
-        <a-mixin id="controller-right" mixin="pointer" vive-controls="hand: right" oculus-touch-controls="hand: right" windows-motion-controls="hand: right" gearvr-controls daydream-controls oculus-go-controls raycaster="objects: .sphere">
+        <a-mixin id="controller-right" mixin="pointer" vive-controls="hand: right" oculus-touch-controls="hand: right" windows-motion-controls="hand: right" gearvr-controls daydream-controls oculus-go-controls>
         </a-mixin>
-        <a-mixin id="controller-left" mixin="pointer" vive-controls="hand: left" oculus-touch-controls="hand: left" windows-motion-controls="hand: left" raycaster="objects: .sphere">
+        <a-mixin id="controller-left" mixin="pointer" vive-controls="hand: left" oculus-touch-controls="hand: left" windows-motion-controls="hand: left">
         </a-mixin>
 
     </a-assets>

@@ -10,7 +10,7 @@ AFRAME.registerComponent('scorepanel', {
     var buttonElreset = document.querySelector('.reset');
 
     this.onMenuButtonClick = this.onMenuButtonClick.bind(this);
-    buttonElreset.addEventListener('click', this.onMenuButtonClick);
+    buttonElreset.addEventListener('triggertouchstart', this.onMenuButtonClick);
 
   },
 
