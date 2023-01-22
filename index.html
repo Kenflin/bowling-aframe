@@ -151,12 +151,23 @@ AFRAME.registerComponent('foo', {
                               colliderEndEvent: collisions;
                               colliderEndEventProperty: clearedEls;"
         ></a-mixin>
+        <a-mixin id="pointer" raycaster="showLine: true; objects: .cube, a-link" super-hands="colliderEvent: raycaster-intersection;
+                               colliderEventProperty: els;
+                               colliderEndEvent:raycaster-intersection-cleared;
+                               colliderEndEventProperty: clearedEls;">
+        </a-mixin>
+        <a-mixin id="controller-right" mixin="pointer" vive-controls="hand: right" oculus-touch-controls="hand: right" windows-motion-controls="hand: right" gearvr-controls="" daydream-controls="" oculus-go-controls="">
+        </a-mixin>
+        <a-mixin id="controller-left" mixin="pointer" vive-controls="hand: left" oculus-touch-controls="hand: left" windows-motion-controls="hand: left">
+        </a-mixin>
+
     </a-assets>
     <a-sky src="./assets/urban_street_02.webp">
     </a-sky>
     
     <!--VRPlayer-->
 <a-entity  id="player" position="0 -2 0.5">
+<!--
         <a-camera></a-camera>
         <a-entity id="rhand" mixin="physics-hands"
                   hand-controls="hand: right">
@@ -164,7 +175,9 @@ AFRAME.registerComponent('foo', {
         <a-entity id="lhand" mixin="physics-hands"
                   hand-controls="hand: left">
         </a-entity>
-
+        -->
+        <a-entity id="rhand" mixin="pointer controller-right" line raycaster super-hands vive-controls oculus-touch-controls windows-motion-controls gearvr-controls daydream-controls oculus-go-controls></a-entity>
+        <a-entity id="lhand" mixin="pointer controller-left" line raycaster super-hands vive-controls oculus-touch-controls windows-motion-controls></a-entity>
     </a-entity>
 <!--MousePlayer-->
 
@@ -260,7 +273,7 @@ AFRAME.registerComponent('foo', {
 <a-entity id="ui" position="0 0 0">
   <a-entity scorepanel
           id="scorePanel"
-          position="0 0 -3"
+          position="0 1 -2"
           info-panel
           visible="true"
           scale="1 1 0"
