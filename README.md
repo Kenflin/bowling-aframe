@@ -1,13 +1,13 @@
 # bowling-aframe
 Experience URL: https://kenflin.github.io/bowling-aframe/
 Images:
-## Start
+### Start
 ![Start](./images/bowling-pals-challenge-start.png)
 
-## Gameplay
+### Gameplay
 ![Gameplay](./images/bowling-pals-challenge-game.png)
 
-## End
+### End
 ![End](./images/bowling-pals-challenge-end.png)
 
 Description: Bowling Experiencience WEBXR . When you click on start button , a countdown start.
