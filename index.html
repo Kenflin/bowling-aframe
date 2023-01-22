@@ -16,6 +16,7 @@
           var el = this.el;
           
           el.addEventListener('raycaster-intersection',function (ev) {
+              console.log(ev);
               console.log(getIntersection(ev));
                 //startgame();
                       })
@@ -33,18 +34,6 @@
             console.log(grabbed);
           })  
         } 
-      });
-    
-  AFRAME.registerComponent('phase-shift', {
-        init: function () {
-          var el = this.el
-          el.addEventListener('gripdown', function () {
-            el.setAttribute('collision-filter', {collisionForces: true})
-          })
-          el.addEventListener('gripup', function () {
-            el.setAttribute('collision-filter', {collisionForces: false})
-          })
-        }
       });
     
 AFRAME.registerComponent('foo', {
@@ -154,6 +143,15 @@ AFRAME.registerComponent('foo', {
         </a-mixin>
         <a-mixin id="controller-left" mixin="pointer" vive-controls="hand: left" oculus-touch-controls="hand: left" windows-motion-controls="hand: left">
         </a-mixin>
+                <a-mixin id="sphere" geometry="primitive: sphere; width: 0.5; height: 0.5; depth: 0.5"
+                 hoverable grabbable stretchable draggable droppable
+                 shadow
+                 event-set__dragdrop="_event: drag-drop; geometry.primitive: sphere; geometry.radius: 0.25"
+                 event-set__hoveron="_event: hover-start; material.opacity: 0.7; transparent: true"
+                 event-set__hoveroff="_event: hover-end; material.opacity: 1; transparent: false"
+                 event-set__dragon="_event: dragover-start; material.wireframe: true"
+                 event-set__dragoff="_event: dragover-end; material.wireframe: false">
+        </a-mixin>
 
     </a-assets>
     <a-sky src="./assets/urban_street_02.webp">
@@ -260,7 +258,7 @@ AFRAME.registerComponent('foo', {
            material="src: #floor; repeat: 10 10;"
            shadow="receive: true;" foo></a-plane>
     <!--ball-->
-  <a-sphere sphere-collider="" class="sphere" mixin="grab-move" position="0 4 0" 
+  <a-sphere sphere-collider="" class="sphere" mixin="sphere grab-move" position="0 4 0" 
             radius="0.2" 
             material="src: #ball; color:orange;"
             id= "bowlingball" dynamic-body="mass: 17.5; linearDamping: 0.01 ;angularDamping: 0.01" handle-events></a-sphere>
