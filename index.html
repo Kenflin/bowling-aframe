@@ -33,10 +33,10 @@
           
           var el = this.el;
           
-          el.addEventListener('onmousedown', function (ev) {
+          el.addEventListener('grab-start', function (ev) {
             console.log(grabbed);
           })
-          el.addEventListener('onmouseup', function (ev) {
+          el.addEventListener('grab-end', function (ev) {
             console.log(grabbed);
           })  
         } 
