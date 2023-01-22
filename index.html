@@ -102,11 +102,11 @@ AFRAME.registerComponent('foo', {
     resetButton.setAttribute('position',{x:0, y:-1, z:5000});
     resetButton.setAttribute('visible',true);
     gameoverPanel.setAttribute('text',"shader: msdf; anchor: center; width: 15; font: https://cdn.aframe.io/examples/ui/Viga-Regular.json; color: white; value: Game Over");
-    gameoverPanel.setAttribute('position',{x:5.75, y:1.3, z:5000});
+    gameoverPanel.setAttribute('position',{x:5.75, y:0.5, z:5000});
     scorePoints.setAttribute('visible',true);
     scorePoints.setAttribute('text',"baseline: top; shader: msdf; anchor: center; width: 12; font: https://cdn.aframe.io/examples/ui/Viga-Regular.json; color: white; value:"+points+" fallen pins");
     scorePanel.setAttribute('visible',true);
-    scorePanel.setAttribute('position',{x:0, y:0, z:-3});
+    scorePanel.setAttribute('position',{x:0, y:0, z:-1.5});
     
     
   
@@ -299,7 +299,7 @@ AFRAME.registerComponent('foo', {
           material="color: #333333; shader: flat; transparent: false">
           <a-entity id="score"></a-entity>
           <a-entity id="gameover"
-            position="2.35 1.3 5000"
+            position="2.35 0.5 5000"
             text="shader: msdf; anchor: center; width: 8; font: https://cdn.aframe.io/examples/ui/Viga-Regular.json; color: white; value: Bowling Experience"></a-entity>
           <a-entity visible="false" id="points"
             position="4.5 0.3 0"
