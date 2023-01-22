@@ -35,9 +35,11 @@
           
           el.addEventListener('grab-start', function (ev) {
             console.log("grab-start");
+            console.log(ev);
           })
           el.addEventListener('grab-end', function (ev) {
             console.log("grab-end");
+            console.log(ev)
           })  
         } 
       });
@@ -55,9 +57,11 @@ AFRAME.registerComponent('foo', {
   init: function () {
     var el = this.el
     el.addEventListener('gripdown', function () {
+        console.log("gripdown");
       el.setAttribute('collision-filter', {collisionForces: true})
     })
     el.addEventListener('gripup', function () {
+        console.log("gripup");
       el.setAttribute('collision-filter', {collisionForces: false})
     })
   }
