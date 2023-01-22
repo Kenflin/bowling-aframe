@@ -8,7 +8,6 @@
     <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.misc.min.js"></script>
     <script src="https://rawgit.com/mayognaise/aframe-mouse-cursor-component/master/dist/aframe-mouse-cursor-component.min.js"></script>
     <script src="https://unpkg.com/super-hands/dist/super-hands.min.js"></script>
-    <script src="scorepanel.js"></script>
   <script>
     var grabbed =false;
     AFRAME.registerComponent('start', {
@@ -17,6 +16,15 @@
           
           el.addEventListener('grab-start',function (ev) {
                 startgame();
+                      })
+                  } 
+      });
+          AFRAME.registerComponent('reset', {
+        init: function () { 
+          var el = this.el;
+          
+          el.addEventListener('grab-start',function (ev) {
+                window.location.reload();
                       })
                   } 
       });
@@ -281,7 +289,7 @@ AFRAME.registerComponent('foo', {
             id= "bowlingball" dynamic-body="mass: 17.5; linearDamping: 0.01 ;angularDamping: 0.01" handle-events></a-sphere>
    <!-- Score Panel-->
 <a-entity id="ui" position="0 0 0">
-  <a-entity scorepanel
+  <a-entity
           id="scorePanel"
           position="0 0 -1.5"
           info-panel
@@ -296,7 +304,7 @@ AFRAME.registerComponent('foo', {
           <a-entity visible="false" id="points"
             position="4.5 0.3 0"
             text="baseline: top; shader: msdf; anchor: center; width: 10; font: https://cdn.aframe.io/examples/ui/Viga-Regular.json; color: white; value: 0"></a-entity>
-          <a-entity geometry="primitive: plane; width: 1; height: 0.5 color: white" id="refresh" class="reset" position="0 100 5000" scale="1 0.5 1" static-body="mass:1" material="color:white" visible="false" mixin="clickmenu">
+          <a-entity geometry="primitive: plane; width: 1; height: 0.5 color: white" id="refresh" class="reset" position="0 100 5000" scale="1 0.5 1" static-body="mass:1" material="color:white" visible="false" reset mixin="clickmenu">
       <a-text position="-0.47 0 0" value="RESET" color="black" wrap-count="30"></a-text>
       </a-entity>   
       <a-entity geometry="primitive: plane; width: 1; height: 0.5 color: white" id="start" class="start" position="0 -1 5000" scale="1 0.5 1" static-body="mass:1" material="color:white" visible="true" start mixin="clickmenu">
