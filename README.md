@@ -2,7 +2,7 @@
 Experience URL: https://kenflin.github.io/bowling-aframe/
 
 ## Gameplay Video
-[![GameplayVideo]({image-url})]({./videos/bowling-gameplay.mp4} "Bowling Gameplay")
+[![GameplayVideo]({./images/bowling-pals-challenge-game.png})]({https://www.youtube.com/shorts/LWOjsp31Jhk} "Bowling Gameplay")
 ![GameplayVideo](./videos/bowling-gameplay.mp4)
 
 ## 360 Images
