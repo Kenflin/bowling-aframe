@@ -151,14 +151,14 @@ AFRAME.registerComponent('foo', {
                               colliderEndEvent: collisions;
                               colliderEndEventProperty: clearedEls;"
         ></a-mixin>
-        <a-mixin id="pointer" raycaster="showLine: true; objects: .cube, a-link" super-hands="colliderEvent: raycaster-intersection;
+        <a-mixin id="pointer" raycaster="showLine: true; objects: .sphere, .reset , .start" super-hands="colliderEvent: raycaster-intersection;
                                colliderEventProperty: els;
                                colliderEndEvent:raycaster-intersection-cleared;
                                colliderEndEventProperty: clearedEls;">
         </a-mixin>
-        <a-mixin id="controller-right" mixin="pointer" vive-controls="hand: right" oculus-touch-controls="hand: right" windows-motion-controls="hand: right" gearvr-controls daydream-controls oculus-go-controls>
+        <a-mixin id="controller-right" mixin="pointer" vive-controls="hand: right" oculus-touch-controls="hand: right" windows-motion-controls="hand: right" gearvr-controls daydream-controls oculus-go-controls raycaster="objects: .sphere">
         </a-mixin>
-        <a-mixin id="controller-left" mixin="pointer" vive-controls="hand: left" oculus-touch-controls="hand: left" windows-motion-controls="hand: left">
+        <a-mixin id="controller-left" mixin="pointer" vive-controls="hand: left" oculus-touch-controls="hand: left" windows-motion-controls="hand: left" raycaster="objects: .sphere">
         </a-mixin>
 
     </a-assets>
