@@ -174,11 +174,11 @@ AFRAME.registerComponent('foo', {
                                colliderEndEventProperty: clearedEls;">
         </a-mixin>
 
-        <a-mixin id="controller-right" mixin="pointer" vive-controls="hand: right" oculus-touch-controls="hand: right" windows-motion-controls="hand: right" gearvr-controls daydream-controls oculus-go-controls>
+        <a-mixin id="controller-right" mixin="pointer" vive-controls="hand: right" oculus-touch-controls="hand: right" windows-motion-controls="hand: right" gearvr-controls="hand: right" daydream-controls="hand: right" oculus-go-controls="hand: right">
         </a-mixin>
         <a-mixin id="controller-left" mixin="pointer" vive-controls="hand: left" oculus-touch-controls="hand: left" windows-motion-controls="hand: left">
         </a-mixin>
-                <a-mixin id="sphere" geometry="primitive: sphere; radius: 0.2"
+         <a-mixin id="sphere" geometry="primitive: sphere; radius: 0.2"
                  hoverable grabbable draggable droppable
                  shadow
                  event-set__grabstart="_event: grab-start;"
