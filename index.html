@@ -35,12 +35,12 @@
           
           el.addEventListener('grab-start', function (ev) {
             console.log("grab-start");
-            console.log(ev.detail.target.);
+            console.log(ev.detail.target);
             ev.detail.target.addState("grabbed");
           })
           el.addEventListener('grab-end', function (ev) {
             console.log("grab-end");
-            console.log(ev.detail.target.)
+            console.log(ev.detail.target);
             ev.detail.target.removeState("grabbed");
           })  
         } 
