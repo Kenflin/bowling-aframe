@@ -88,7 +88,7 @@ AFRAME.registerComponent('foo', {
       startButton.setAttribute('visible',false);
       startButton.setAttribute('position',{x:0, y:100, z:1});
       scorePanel.setAttribute('visible',false);
-      scorePanel.setAttribute('position',{x:0, y:-10, z:-3});
+      scorePanel.setAttribute('position',{x:0, y:-10, z:-2});
       setTimeout(score, 22000);
   }
   function score() {
@@ -106,7 +106,7 @@ AFRAME.registerComponent('foo', {
     scorePoints.setAttribute('visible',true);
     scorePoints.setAttribute('text',"baseline: top; shader: msdf; anchor: center; width: 12; font: https://cdn.aframe.io/examples/ui/Viga-Regular.json; color: white; value:"+points+" fallen pins");
     scorePanel.setAttribute('visible',true);
-    scorePanel.setAttribute('position',{x:0, y:0, z:-1.5});
+    scorePanel.setAttribute('position',{x:0, y:0, z:-2});
     
     
   
@@ -291,7 +291,7 @@ AFRAME.registerComponent('foo', {
 <a-entity id="ui" position="0 0 0">
   <a-entity
           id="scorePanel"
-          position="0 0 -1.5"
+          position="0 0 -2"
           info-panel
           visible="true"
           scale="1 1 0"
