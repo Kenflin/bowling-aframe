@@ -25,3 +25,5 @@ When time reach 0 , the game will show you your score. You can press reset to re
 
 
 ### Compatibility Devices
+
+This VR experience can run in all devices that have controllers like: HTC vive , Oculus GO , Meta Quest/Meta Quest 2.
