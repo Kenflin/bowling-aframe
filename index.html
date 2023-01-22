@@ -143,8 +143,8 @@ AFRAME.registerComponent('foo', {
         </a-mixin>
         <a-mixin id="controller-left" mixin="pointer" vive-controls="hand: left" oculus-touch-controls="hand: left" windows-motion-controls="hand: left">
         </a-mixin>
-                <a-mixin id="sphere" geometry="primitive: sphere; width: 0.5; height: 0.5; depth: 0.5"
-                 hoverable grabbable stretchable draggable droppable
+                <a-mixin id="sphere" geometry="primitive: sphere; radius: 0.2"
+                 hoverable grabbable draggable droppable
                  shadow
                  event-set__dragdrop="_event: drag-drop; geometry.primitive: sphere; geometry.radius: 0.25"
                  event-set__hoveron="_event: hover-start; material.opacity: 0.7; transparent: true"
