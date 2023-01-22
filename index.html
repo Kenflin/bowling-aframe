@@ -28,21 +28,21 @@
                       })
                   } 
       });
-  AFRAME.registerComponent('handle-events', {
-        init: function () {
+ //* AFRAME.registerComponent('handle-events', {
+      //  init: function () {
           
-          var el = this.el;
+        //  var el = this.el;
           
-          el.addEventListener('grab-start', function (ev) {
-            console.log("grab-start");
-            console.log(ev.detail.target.states);
-          })
-          el.addEventListener('grab-end', function (ev) {
-            console.log("grab-end");
-            console.log(ev.detail.target.states);
-          })  
-        } 
-      });
+         // el.addEventListener('grab-start', function (ev) {
+         //   console.log("grab-start");
+         //   console.log(ev.detail.target.states);
+        //  })
+       //   el.addEventListener('grab-end', function (ev) {
+        //    console.log("grab-end");
+       //     console.log(ev.detail.target.states);
+      //    })  
+      //  } 
+     // });
     
 AFRAME.registerComponent('foo', {
     init: function() {
@@ -142,7 +142,7 @@ AFRAME.registerComponent('foo', {
         <img id="ball" src="./assets/bowlingball.png" />
         <img id="floor" src="./assets/basketball-floor-texture.jpg" />
         <a-mixin id="grab-move"
-                 hoverable grabbable
+                 hoverable grabbable draggable
                  event-set__hoveron="_event: hover-start; material.opacity: 0.7; transparent: true"
                  event-set__hoveroff="_event: hover-end; material.opacity: 1; transparent: false"
                  event-set__grabon="_event: grab-start;material.color: white;"
@@ -167,11 +167,13 @@ AFRAME.registerComponent('foo', {
                               colliderEndEvent: collisions;
                               colliderEndEventProperty: clearedEls;"
         ></a-mixin>
-        <a-mixin id="pointer" phase-shift raycaster="showLine: true; objects: .sphere, .reset , .start" super-hands="colliderEvent: raycaster-intersection;
+
+        <a-mixin id="pointer" phase-shift raycaster="showLine: true; objects: .sphere, .reset , .start" collision-filter="collisionForces: false" static-body="shape: sphere; sphereRadius: 0.001" super-hands="colliderEvent: raycaster-intersection;
                                colliderEventProperty: els;
                                colliderEndEvent:raycaster-intersection-cleared;
                                colliderEndEventProperty: clearedEls;">
         </a-mixin>
+
         <a-mixin id="controller-right" mixin="pointer" vive-controls="hand: right" oculus-touch-controls="hand: right" windows-motion-controls="hand: right" gearvr-controls daydream-controls oculus-go-controls>
         </a-mixin>
         <a-mixin id="controller-left" mixin="pointer" vive-controls="hand: left" oculus-touch-controls="hand: left" windows-motion-controls="hand: left">
