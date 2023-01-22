@@ -15,7 +15,7 @@
         init: function () { 
           var el = this.el;
           
-          el.addEventListener('triggertouchstart',function (ev) {
+          el.addEventListener('griptouchstart',function (ev) {
                 startgame();
                       })
                   } 
@@ -151,7 +151,7 @@ AFRAME.registerComponent('foo', {
                               colliderEndEvent: collisions;
                               colliderEndEventProperty: clearedEls;"
         ></a-mixin>
-        <a-mixin id="pointer" raycaster="showLine: true; objects: .sphere, .reset , .start" super-hands="colliderEvent: raycaster-intersection;
+        <a-mixin id="pointer" phase-shift raycaster="showLine: true; objects: .sphere, .reset , .start" super-hands="colliderEvent: raycaster-intersection;
                                colliderEventProperty: els;
                                colliderEndEvent:raycaster-intersection-cleared;
                                colliderEndEventProperty: clearedEls;">
